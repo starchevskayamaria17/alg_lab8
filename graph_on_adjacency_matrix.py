@@ -83,11 +83,13 @@ class AdjMatrixGraph:
         :param int v: индекс вершины графа
         :rtype: list of int
         """
+        return self.adj[v]
         lis = []
         for i in range(len(self.adj[v])):
             if self.adj[v][i] == 1:
                 lis.append(i)
         return lis
+       
     
     def draw(self, filename='test.gv'):
         """
